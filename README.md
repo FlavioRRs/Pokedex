@@ -6,7 +6,7 @@ Este projeto foi feito puramente com **HTML**, **CSS** e **JavaScript**, com o i
 
 ## Deploy
 
-O deploy foi feito no vercel, para acessar basta clickar [neste link]().
+O deploy foi feito no vercel, para acessar basta clickar [neste link](https://pokedex-flavio.vercel.app/).
 
 ## Base
 
