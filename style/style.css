@@ -7,14 +7,17 @@
 
 body {
     text-align: center;
-    background: linear-gradient(0deg, white, skyblue);
+    background: linear-gradient(0deg, #fff, #acddf1);
     min-height: 100vh;
+    position: relative;
 }
 
 main {
     display: inline-block;
     padding: 15px;
+    margin-top: clamp(15px, 10%, 30px);
     position: relative;
+    z-index: 1;
 }
 
 .pokedex {
@@ -34,13 +37,13 @@ main {
     font-size: clamp(8px, 5vw, 28px);
     position: absolute;
     font-weight: 600;
-    color: darkgrey;
+    color: #a9a9a9;
     top: 54.5%;
     right: 27%;
 }
 
 .pokemon__name {
-    color: grey;
+    color: #808080;
     text-transform: capitalize;
 }
 
@@ -80,7 +83,7 @@ form {
     border-radius: 5px;
     font-size: clamp(8px, 5vw, 1rem);
     font-weight: 600;
-    color: white;
+    color: #fff;
     background-color: #444;
     box-shadow: -2px 3px 0 #222, -4px 6px 0 black;
 }
@@ -88,4 +91,79 @@ form {
 .button:active {
     box-shadow: inset -4px 4px 0 #222;
     font-size: 0.9rem;
+}
+
+/* estilização dos pokemons do cenários */
+.pokemon {
+    position: absolute;
+    bottom: 0;
+    z-index: 0;
+    transition: all 0.5s ease;
+}
+
+.abra {
+    height: 15%;
+    left: 15%;
+    transform: scaleX(-1);
+}
+
+.gengar {
+    height: 15%;
+    left: 35%;
+    transform: translate(-50%, 0);
+}
+
+.pikachu {
+    height: 15%;
+    transform: scaleX(-1);
+    right: 15%;
+}
+
+.totodile {
+    height: 20%;
+    right: 2.5%;
+}
+
+@media (max-width: 1024px) {
+    .abra {
+        left: 5%;
+        height: 10%;
+    }
+
+    .gengar {
+        left: 40%;
+        height: 10%;
+    }
+
+    .pikachu {
+        right: 25%;
+        height: 10%;
+    }
+    .totodile {
+        right: 0;
+        height: 13%;
+    }
+}
+
+/* estilização da grama feita com o: https://www.shapedivider.app/ */
+.custom-shape-divider-bottom-1672708516 {
+    z-index: -1;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1672708516 svg {
+    position: relative;
+    display: block;
+    width: calc(300% + 1.3px);
+    height: 50px;
+}
+
+.custom-shape-divider-bottom-1672708516 .shape-fill {
+    fill: #129915;
 }
